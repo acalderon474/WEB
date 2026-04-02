@@ -99,3 +99,15 @@ main {
         font-size: 1rem;
     }
 }
+.cart-container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    border: 1px solid var(--accent-color);
+}
+
+#cart-count {
+    color: var(--accent-color);
+    transition: all 0.3s ease;
+}
