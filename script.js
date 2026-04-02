@@ -18,7 +18,14 @@ ctaButton.addEventListener('click', (event) => {
 
     // Un pequeño efecto visual: cambiar el color del contador temporalmente
     cartCountElement.style.color = "#38bdf8";
-    cartCountElement.style.fontWeight = "bold";
+    cartCountElement.style.transform = "scale(1.2)"; // Crece un poquito
+    cartCountElement.style.display = "inline-block"; // Necesario para que el scale funcione
+
+    // Después de 300 milisegundos, vuelve a la normalidad
+    setTimeout(() => {
+        cartCountElement.style.color = ""; // Vuelve al color del CSS
+        cartCountElement.style.transform = "scale(1)";
+    }, 300);
 
     // Mostramos un mensaje en la consola (puedes verlo con F12)
     console.log(`Producto agregado. Total: ${totalProducts}`);
